@@ -1,0 +1,8 @@
+{
+    "n_train": 1061863,
+    "n_test": 455085,
+    "test_outliers": 4462,
+    "test_inliers": 450623,
+    "score_min": -0.06895435592388033,
+    "score_max": 0.30375796529615046
+}
