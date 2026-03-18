@@ -1,4 +1,3 @@
-
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -58,7 +57,7 @@ def get_trains():
 @app.post("/trains/add")
 def add_train(train: TrainInput):
     # Prepare features for model (must match training order)
-    # Order: ['TP2', 'TP3', 'H1', 'DV_pressure', 'Reservoirs', 'Oil_temperature', 'Motor_current', 'COMP', 'DV_eletric', 'Towers', 'MPG', 'LPS', 'Pressure_switch', 'Oil_level', 'Caudal_impulses']
+    # Order: ['TP2', 'TP3', 'H1', 'DV_pressure', 'Reservoirs', 'Oil_temperature', 'Motor_current', 'COMP', 'DV_electric', 'Towers', 'MPG', 'LPS', 'Pressure_switch', 'Oil_level', 'Caudal_impulses']
     # We will assume defaults for digital signals if not provided, or simply use the provided ones if we update the interface.
     # For MVP, we use the 7 core analog inputs and assume nominal digital values for a running train.
     
